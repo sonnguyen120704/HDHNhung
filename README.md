@@ -1,29 +1,37 @@
-Week 2:
-# Biên dịch và cài đặt U-Boot cho BeagleBone Black
+Bài tập HĐH Nhúng: U-Boot & Kernel
+Mục tiêu
 
-## Mục tiêu
-Biên dịch thành công U-Boot cho bo mạch BeagleBone Black trên máy PC Ubuntu bằng phương pháp cross-compile.
+Biên dịch và khởi động U-Boot và Linux Kernel trên BeagleBone Black.
 
-## Môi trường
-- Host OS: Ubuntu
-- Target: BeagleBone Black (AM335x)
-- Toolchain: arm-linux-gnueabihf-gcc
-- Source: https://github.com/beagleboard/u-boot
+Nội dung thực hiện
+U-Boot
 
-## Các bước thực hiện
-1. Cài đặt toolchain và các gói cần thiết
-2. Clone mã nguồn U-Boot
-3. Cấu hình U-Boot cho BeagleBone Black
-4. Biên dịch U-Boot bằng cross-compiler
+Biên dịch U-Boot bằng toolchain ARM
 
-## Kết quả
-- Biên dịch thành công U-Boot
-- Tạo ra các file:
-  - `MLO`
-  - `u-boot.img`
+Cài đặt MLO và u-boot.img lên thẻ nhớ
 
-## Minh chứng
-![Build U-Boot](build_uboot.png)
+Khởi động U-Boot và kiểm tra qua UART
 
-## Kết luận
-Quá trình biên dịch U-Boot cho BeagleBone Black trên Ubuntu hoàn tất và sẵn sàng để sử dụng cho bước boot hệ thống.
+Kernel
+
+Biên dịch Kernel (zImage + dtb)
+
+Load kernel và dtb từ U-Boot
+
+Khởi động kernel bằng lệnh bootz
+
+Kết quả
+
+U-Boot chạy thành công
+
+Kernel boot thành công và hiển thị log
+
+Môi trường
+
+Ubuntu
+
+arm-linux-gnueabihf
+
+BeagleBone Black
+
+UART debug
